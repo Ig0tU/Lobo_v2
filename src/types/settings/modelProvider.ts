@@ -3,15 +3,9 @@ export type CustomModels = { displayName: string; id: string }[];
 export interface OpenAIConfig {
   OPENAI_API_KEY: string;
   azureApiVersion?: string;
-  /**
-   * custom mode name for fine-tuning or openai like model
-   */
   customModelName?: string;
   enabled: boolean;
   endpoint?: string;
-  /**
-   * @deprecated
-   */
   models?: string[];
   useAzure?: boolean;
 }
@@ -76,39 +70,14 @@ export interface GroqConfig {
   enabled: boolean;
 }
 
-export interface OpenRouterConfig {
+export interface GeminiConfig {
   apiKey?: string;
-  customModelName?: string;
-  enabled?: boolean;
+  enabled: boolean;
 }
 
-export interface ZeroOneConfig {
+export interface HuggingFaceConfig {
   apiKey?: string;
-  customModelName?: string;
-  enabled?: boolean;
+  enabled: boolean;
+  model?: string;
 }
 
-export interface TogetherAIConfig {
-  apiKey?: string;
-  customModelName?: string;
-  enabled?: boolean;
-}
-
-export interface GlobalLLMConfig {
-  anthropic: AnthropicConfig;
-  azure: AzureOpenAIConfig;
-  bedrock: AWSBedrockConfig;
-  google: GoogleConfig;
-  groq: GroqConfig;
-  mistral: MistralConfig;
-  moonshot: MoonshotConfig;
-  ollama: OllamaConfig;
-  openAI: OpenAIConfig;
-  openrouter: OpenRouterConfig;
-  perplexity: PerplexityConfig;
-  togetherai: TogetherAIConfig;
-  zeroone: ZeroOneConfig;
-  zhipu: ZhiPuConfig;
-}
-
-export type GlobalLLMProviderKey = keyof GlobalLLMConfig;

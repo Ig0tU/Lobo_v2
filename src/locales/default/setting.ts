@@ -523,3 +523,28 @@ export default {
     title: '扩展插件',
   },
 };
+
+  llm: {
+    // ... (existing translations)
+    Gemini: {
+      title: 'Google Gemini',
+      apiKey: {
+        title: 'API Key',
+        placeholder: 'Enter your Gemini API key',
+        required: 'API Key is required',
+      },
+    },
+    HuggingFace: {
+      title: 'Hugging Face',
+      apiKey: {
+        title: 'API Key',
+        placeholder: 'Enter your Hugging Face API key',
+        required: 'API Key is required',
+      },
+      model: {
+        title: 'Model',
+        placeholder: 'Select a model',
+        required: 'Model selection is required',
+      },
+    },
+  },
